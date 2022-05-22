@@ -165,69 +165,77 @@
     <!-- Меню -->
     <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white"></div>
     <div class="side-menu">
-        <div class="side-menu__logo">
-            <!--<a href="http://orgasma.fm">orgasma</a>-->
-        </div>
-
-
+       
         <ul class="side-menu__channels">
             <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>white</a></li>
-            <li class="side-menu__channels-item"><a href="/black">black</a></li>
-            <li class="side-menu__channels-item"><a href="/late">Расписание плейлистов</a></li>          
+            <li class="side-menu__channels-item"><a href="#">black</a></li>
+            <li class="side-menu__channels-item"><a href="#">late</a></li>
+            <li class="side-menu__channels-item"><a href="#">new</a></li>
+            <li class="side-menu__channels-item"><a href="#">red</a></li>
+            <li class="side-menu__channels-item"><a href="#">sloboda</a></li>
         </ul>
 
         <div class="side-menu__app">
-            <div class="side-menu__app_muted">Еще станции</div>
-            <div><a href="/relaxforyou">relaxforyou</a></div>
-            <div><a href="/shuffleplay">shuffle play</a></div>
+            <div class="accordion">
+                <section class="accordion_item">
+                    <p class="title_block">иконка на главный экран</p>
+                    <div class="info">
+                        <a class="info_item iphone_description popup_button open-popup">иконка на iphone</a>
+                        <a class="info_item android_description popup_button open-popup">иконка на android</a>
+                    </div>
+                </section>
+            </div>
         </div>
 
-        <div class="side-menu__app">
-            <div class="side-menu__app_muted">Прошариться</div>
-            <div>
-                <a href="/best/2021">Best Music
-                    <img style="width: 18px; margin-right: 4px;" src="/img/icons/spotify.svg">
-                    <img style="width: 18px; margin-right: 4px;" src="/img/icons/apple-music.svg">
-                    <img style="width: 18px; margin-right: 4px;" src="/img/icons/yandex-music.svg">
-                    <img style="width: 18px;" src="/img/icons/vk-music.svg">
-                </a>
-            </div>
-            <div><a href="/about">О проекте</a></div>
-            <div><a href="/about/donate">Donate</a></div>
-        </div>      
-
-        <ul class="side-menu__social">
-            <li class="side-menu__social-item" style="margin-top: 60px;">#orgasma</li>
-            <li class="side-menu__social-item">
-                <a target="_blank" title="Оргазма в VK" href="https://vk.com/orgasma">
-                    <i style="color: #fff; font-size: 30px; padding: 0 16px;" class="fa fa-vk"></i>
-                </a>
-            </li>
-            <li class="side-menu__social-item">
-                <a target="_blank" title="Оргазма в  Instagram" href="https://instagram.com/orgasma.fm">
-                    <i style="color: #fff; font-size: 30px; padding: 0 16px;" class="fa fa-instagram"></i>
-                </a>
-            </li>          
-        </ul>
+        <div class="side-menu__app">         
+            <div><a href="https://t.me/abgarbar">твое приветствие в  эфире</a></div>
+            <div><a href="https://t.me/abgarbar">оставь отзыв</a></div>
+        </div>
 
         <ul class="side-menu__about">
             <li class="side-menu__about-item">
-                &copy; 2022 Orgasma
-            </li>
-            <li class="side-menu__about-item">
-                <a target="_blank" href="/about/howtolisten">Где слушать</a>
-            </li>
-            <li class="side-menu__about-item">
-                <a target="_blank" href="mailto:station@orgasma.fm">Написать нам</a>
+                &copy; 2022 Abgar.bar
             </li>
         </ul>
+    </div>
 
-        <div style="text-align: center; margin-bottom: 50px;">
-            <a href="https://radioheart.ru" target="_blank" title="Хостинг-провайдер Radioheart">
-                <img style="width: 40%; max-width: 140px;" src="/img/we-love-radio.svg"></a>
-            <img style="width: 40%; max-width: 140px; margin-left: 12px;" src="/img/from-kenig-amber.png">
+    <!-- иконка на главный экран iphone -->
+    <div class=""></div>
+    <div class="instructions_popup">    
+        <p>Открой abgar.bar в браузере SAFARI и нажми на квадратик со стрелкой внизу экрана</p>
+        <p>В появившемся меню выбери «На экран «Домой» — иконка радио появится на рабочем столе твоего iPhone</p>       
+    </div>
+
+    <div class=""></div>
+    <div class="instructions_popup">   
+        <p>Открой abgar.bar в браузере CHROME и нажми на три маленькие точки в правом верхнем углу, чтобы открыть меню</p>
+        <p> Выбери «Добавить на главный экран» — иконка радио появится на рабочем столе твоего смартфона</p>        
+    </div>
+
+
+
+    <a href="#" class="popup_button open-popup">Оставить заявку</a>
+      
+    
+    <div class="popup-bg">
+        <div class="popup">
+            <span class="close-popup "><svg viewBox="0 0 512 512" width="100" title="window-close">
+                    <path
+                        d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-83.6 290.5c4.8 4.8 4.8 12.6 0 17.4l-40.5 40.5c-4.8 4.8-12.6 4.8-17.4 0L256 313.3l-66.5 67.1c-4.8 4.8-12.6 4.8-17.4 0l-40.5-40.5c-4.8-4.8-4.8-12.6 0-17.4l67.1-66.5-67.1-66.5c-4.8-4.8-4.8-12.6 0-17.4l40.5-40.5c4.8-4.8 12.6-4.8 17.4 0l66.5 67.1 66.5-67.1c4.8-4.8 12.6-4.8 17.4 0l40.5 40.5c4.8 4.8 4.8 12.6 0 17.4L313.3 256l67.1 66.5z" />
+                </svg></span>
+                <div class="instructions_popup">    
+                    <p>Открой abgar.bar в браузере SAFARI и нажми на квадратик со стрелкой внизу экрана</p>
+                    <p>В появившемся меню выбери «На экран «Домой» — иконка радио появится на рабочем столе твоего iPhone</p>       
+                </div>
         </div>
     </div>
+
+
+
+
+
+
+
     <!-- Конец бокового меню -->
 
 
@@ -313,7 +321,34 @@
             // 			// $('#song-name').text(songName[1].trim());
             // 	  // }
             // }, 3000);
+
+            // POPUP
+
+            $('.open-popup').click(function (e) {
+                e.preventDefault();
+                $('.popup-bg').fadeIn(800);
+                $('html').addClass('no-scroll');
+            });
+
+            $('.close-popup').click(function () {
+                $('.popup-bg').fadeOut(800);
+                $('html').removeClass('no-scroll');
+            });
         });
+    </script>
+
+    <script type="text/javascript">
+        ! function (i) {
+            var o, n;
+            i(".title_block").on("click", function () {
+                o = i(this).parents(".accordion_item"), n = o.find(".info"),
+                    o.hasClass("active_block") ? (o.removeClass("active_block"),
+                        n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
+                            o.siblings(".active_block").removeClass("active_block").children(
+                                ".info").stop(!0, !0).slideUp())
+            })
+        }(jQuery);
+
     </script>
 </body>
 
