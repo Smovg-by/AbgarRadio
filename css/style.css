@@ -6,6 +6,7 @@ body {
 .hidden {
   display: none;
 }
+
 .play,
 .pause {
   cursor: pointer;
@@ -893,9 +894,9 @@ body {
 .side-menu__channels-item a:hover {
   color: #6c6c6c;
 }
-.side-menu__channels-item_active a {
+/* .side-menu__channels-item_active a {
   color: #5d78c1;
-}
+} */
 .side-menu__app {
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -922,9 +923,9 @@ body {
   text-decoration: none;
   transition: 0.5s;
 }
-.side-menu__app a:hover {
+/* .side-menu__app a:hover {
   color: #5d78c1;
-}
+} */
 .side-menu__social {
   display: block;
   list-style: none;
@@ -999,9 +1000,9 @@ body {
   color: #bebebe;
   white-space: nowrap;
 }
-.side-menu__about-item a:hover {
+/* .side-menu__about-item a:hover {
   color: #5d78c1;
-}
+} */
 /* side menu */
 
 /* стили блока аккордеон */
@@ -1065,11 +1066,14 @@ body {
   padding: 10px 15px;
   overflow: hidden;
   background: inherit;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white; 
 }
 /* параграф внутри блоков с содержанием */
 .accordion .info_item {
   margin-bottom: 10px;
   display: block;
+  font-size: 24px;
 }
 /* картинки внутри аккордеона */
 .accordion .info img {
@@ -1097,18 +1101,27 @@ body {
 /* popup с инструкциями */
 .instructions_popup {
   height: 70vh;
-  background-color: red;
+  width: 100%;
+  position: fixed;
+  background: grey;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px;
+  padding-top: 60px;
+  font-size: 30px;
+  z-index: 200;
 }
 
 .popup_button {
   color: #ffffff;
-  font-size: 30px;
+  font-size: 24px;
   margin: 0 auto;
   display: block;
   text-decoration: none;
   text-align: center;
   padding: 20px 50px;
-  background: #36779A;
+  background: inherit;
   max-width: 300px;
 }
 
@@ -1135,10 +1148,16 @@ body {
 
 .close-popup {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background: url("/img/close-icon.png") -50px 0px !important;
+  background-size: cover;
+  z-index: 200;
 }
+
 
 .no-scroll {
   overflow-y: hidden;
