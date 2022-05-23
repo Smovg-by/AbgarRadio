@@ -879,7 +879,7 @@ body {
 .side-menu__channels-item {
   text-transform: uppercase;
   letter-spacing: 1px;
-  margin-top: 18px;
+  margin-top: 8px;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 36px;
@@ -1100,7 +1100,7 @@ body {
 
 /* popup с инструкциями */
 .instructions_popup {
-  height: 70vh;
+  height: fit-content;
   width: 100%;
   position: fixed;
   background: grey;
@@ -1109,7 +1109,7 @@ body {
   transform: translate(-50%, -50%);
   padding: 30px;
   padding-top: 60px;
-  font-size: 30px;
+  font-size: 26px;
   z-index: 200;
 }
 
@@ -1159,8 +1159,9 @@ body {
 }
 
 
-.no-scroll {
+.no-scroll::-webkit-scrollbar {
   overflow-y: hidden;
+  -webkit-appearance: none;
 }
 
 .close-popup svg {
