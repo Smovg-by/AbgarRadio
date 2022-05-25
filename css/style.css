@@ -1159,9 +1159,8 @@ body {
 }
 
 
-.no-scroll::-webkit-scrollbar {
-  overflow-y: hidden;
-  -webkit-appearance: none;
+.no-scroll {
+  overflow: hidden;
 }
 
 .close-popup svg {
