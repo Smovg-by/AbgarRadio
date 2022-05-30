@@ -17,7 +17,7 @@
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap" rel="stylesheet">
 
     <!-- Styling -->
     <link type="text/css" rel="stylesheet" href="css/style.css">
@@ -170,51 +170,70 @@
 
         <ul class="side-menu__channels">
             <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>white</a></li>
-            <li class="side-menu__channels-item"><a href="#">black</a></li>
-            <li class="side-menu__channels-item"><a href="#">late</a></li>
-            <li class="side-menu__channels-item"><a href="#">new</a></li>
-            <li class="side-menu__channels-item"><a href="#">red</a></li>
-            <li class="side-menu__channels-item"><a href="#">sloboda</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">black</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">late</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">new</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">red</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">sloboda</a></li>
         </ul>
 
-        <div class="side-menu__app">
+        <!-- <div class="side-menu__app">
             <div class="accordion">
                 <section class="accordion_item">
-                    <p class="title_block">иконка на главный экран</p>
+                    <p class="title_block">установи иконку на главный экран</p>
                     <div class="info">
-                        <a class="info_item iphone_description popup_button open-popup">иконка на iphone</a>
-                        <a class="info_item android_description popup_button open-popup">иконка на android</a>
+                        <a class="info_item iphone_description popup_button open-popup">на ios</a>
+                        <a class="info_item android_description popup_button open-popup">на android</a>
                     </div>
                 </section>
             </div>
+        </div> -->
+
+        <div class="side-menu__app">
+            <div class="side-menu__app_muted">установи иконку на главный экран</div>
+            <div><a class="iphone_description popup_button open-popup">на ios</a></div>
+            <div><a class="android_description popup_button open-popup">на android</a></div>
         </div>
 
         <div class="side-menu__app">
-            <div><a href="https://t.me/abgarbar">твое приветствие в эфире</a></div>
-            <div><a href="https://t.me/abgarbar">оставь отзыв</a></div>
+            <div class="side-menu__app_muted">будь на связи</div>
+            <div><a href="https://t.me/abgarbar">чат abgar.bar radio</a></div>
+            <div><a href="https://t.me/abgarbar">напиши мне</a></div>
         </div>
 
         <ul class="side-menu__about">
             <li class="side-menu__about-item">
-                &copy; 2022 Abgar.bar
+                &copy; 2022 Abgar.bar Radio
+            </li>
+            <li class="side-menu__about-item">
+                Сделано с любовью к двойной шаверме в лаваше
+            </li>
+            <li class="side-menu__about-item">
+                BGRNDSGN | ANYWAYDIE
             </li>
         </ul>
     </div>
 
     <!-- иконка на главный экран iphone -->
-
+    <div class="modal-bg" id="bg-image-holder-modal"></div>
     <div class="instructions_popup iphone hidden">
+        <div class="os-icon os-apple"></div>
         <span class="close-popup"></span>
         <p>Открой abgar.bar в браузере SAFARI и нажми на квадратик со стрелкой внизу экрана</p>
         <p>В появившемся меню выбери «На экран «Домой» — иконка радио появится на рабочем столе твоего iPhone</p>
     </div>
 
+
+    <div class="modal-bg" id="bg-image-holder-modal"></div>
     <div class="instructions_popup android hidden">
+        <div class="os-icon os-android"></div>
         <span class="close-popup"></span>
-        <p>Открой abgar.bar в браузере CHROME и нажми на три маленькие точки в правом верхнем углу, чтобы открыть меню
+        <p>Открой abgar.bar в браузере CHROME и нажми на три маленькие точки в правом верхнем углу, чтобы открыть
+            меню
         </p>
         <p>Выбери «Добавить на главный экран» — иконка радио появится на рабочем столе твоего смартфона</p>
     </div>
+
     <!-- иконка на главный экран iphone -->
     <!-- Конец бокового меню -->
 
@@ -224,6 +243,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://player.radioheart.ru/js/app.js"></script>
     <script type="text/javascript" src="js/side-menu.js"></script>
+
 
     <script>
         $(document).ready(function () {
@@ -259,6 +279,7 @@
                 mutations.forEach(function (mutationRecord) {
                     var imageUrl = $(mutationRecord.target).css('background-image');
                     $('#bg-image-holder').css('background-image', imageUrl);
+                    $('#bg-image-holder-modal').css('background-image', imageUrl);
                     $('#track-image').css('background-image', imageUrl);
                     metaImage = imageUrl;
                     updateMediaSession();
@@ -305,25 +326,29 @@
 
             $('.iphone_description').click(function (e) {
                 e.preventDefault();
+                $('.side-menu').addClass('hidden')
                 $('.iphone').removeClass('hidden')
-                $('body').addClass('no-scroll');
+                $('.modal-bg').addClass('active')            
             });
 
             $('.close-popup').click(function () {
-                $('body').removeClass('no-scroll');
+                $('.modal-bg').removeClass('active')
                 $('.iphone').addClass('hidden')
+                $('.side-menu').removeClass('hidden')
             });
 
             $('.android_description').click(function (e) {
                 e.preventDefault();
-                console.log('click');
+                $('.side-menu').addClass('hidden')
+                $('.modal-bg').addClass('active')
                 $('.android').removeClass('hidden')
-                $('body').addClass('no-scroll');
+
             });
 
             $('.close-popup').click(function () {
-                $('body').removeClass('no-scroll');
+                $('.modal-bg').removeClass('active')
                 $('.android').addClass('hidden')
+                $('.side-menu').removeClass('hidden')
             });
         });
     </script>
