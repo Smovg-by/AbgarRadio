@@ -169,12 +169,10 @@
     <div class="side-menu">
 
         <ul class="side-menu__channels">
-            <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>white</a></li>
-            <li class="side-menu__channels-item"><a href="./index.html">black</a></li>
-            <li class="side-menu__channels-item"><a href="./index.html">late</a></li>
-            <li class="side-menu__channels-item"><a href="./index.html">new</a></li>
-            <li class="side-menu__channels-item"><a href="./index.html">red</a></li>
-            <li class="side-menu__channels-item"><a href="./index.html">sloboda</a></li>
+            <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>abgar.bar</a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">negroni cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">aerobic cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
+            <li class="side-menu__channels-item"><a href="./index.html">ibiza cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
         </ul>
 
         <!-- <div class="side-menu__app">
@@ -198,7 +196,7 @@
         <div class="side-menu__app">
             <div class="side-menu__app_muted">будь на связи</div>
             <div><a href="https://t.me/abgarbar">чат abgar.bar radio</a></div>
-            <div><a href="https://t.me/abgarbar">напиши мне</a></div>
+            <div><a href="https://t.me/anywaydie">напиши мне</a></div>
         </div>
 
         <ul class="side-menu__about">
@@ -215,7 +213,7 @@
     </div>
 
     <!-- иконка на главный экран iphone -->
-    <div class="modal-bg" id="bg-image-holder-modal"></div>
+    <div class="modal-bg" id="bg-image-holder-modal" style='z-index: 250'></div>
     <div class="instructions_popup iphone hidden">
         <div class="os-icon os-apple"></div>
         <span class="close-popup"></span>
@@ -256,7 +254,6 @@
 
             function updateMediaSession() {
                 if ('mediaSession' in navigator) {
-
                     if (metaImage == '') {
                         metaImage = 'https://abgar.bar/images/logo-500x500.jpg';
                     }
@@ -326,20 +323,23 @@
 
             $('.iphone_description').click(function (e) {
                 e.preventDefault();
-                $('.side-menu').addClass('hidden')
+                $('.side-menu').addClass('invisible')
+                $('.side-menu__toggle-button').addClass('invisible')
                 $('.iphone').removeClass('hidden')
-                $('.modal-bg').addClass('active')            
+                $('.modal-bg').addClass('active')
             });
 
             $('.close-popup').click(function () {
                 $('.modal-bg').removeClass('active')
                 $('.iphone').addClass('hidden')
-                $('.side-menu').removeClass('hidden')
+                $('.side-menu').removeClass('invisible')
+                $('.side-menu__toggle-button').removeClass('invisible')
             });
 
             $('.android_description').click(function (e) {
                 e.preventDefault();
-                $('.side-menu').addClass('hidden')
+                $('.side-menu').addClass('invisible')
+                $('.side-menu__toggle-button').addClass('invisible')
                 $('.modal-bg').addClass('active')
                 $('.android').removeClass('hidden')
 
@@ -348,7 +348,8 @@
             $('.close-popup').click(function () {
                 $('.modal-bg').removeClass('active')
                 $('.android').addClass('hidden')
-                $('.side-menu').removeClass('hidden')
+                $('.side-menu').removeClass('invisible')
+                $('.side-menu__toggle-button').removeClass('invisible')
             });
         });
     </script>
