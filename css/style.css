@@ -927,7 +927,7 @@ body {
 .side-menu__app a {
   color: #fff;
   text-decoration: none;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
 /* .side-menu__app a:hover {
   color: #5d78c1;

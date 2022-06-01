@@ -325,6 +325,7 @@
                 e.preventDefault();
                 $('.side-menu').addClass('invisible')
                 $('.side-menu__toggle-button').addClass('invisible')
+                $('.footer-controls').addClass('invisible')
                 $('.iphone').removeClass('hidden')
                 $('.modal-bg').addClass('active')
             });
@@ -334,12 +335,14 @@
                 $('.iphone').addClass('hidden')
                 $('.side-menu').removeClass('invisible')
                 $('.side-menu__toggle-button').removeClass('invisible')
+                $('.footer-controls').removeClass('invisible')
             });
 
             $('.android_description').click(function (e) {
                 e.preventDefault();
                 $('.side-menu').addClass('invisible')
                 $('.side-menu__toggle-button').addClass('invisible')
+                $('.footer-controls').addClass('invisible')
                 $('.modal-bg').addClass('active')
                 $('.android').removeClass('hidden')
 
@@ -350,6 +353,7 @@
                 $('.android').addClass('hidden')
                 $('.side-menu').removeClass('invisible')
                 $('.side-menu__toggle-button').removeClass('invisible')
+                $('.footer-controls').removeClass('invisible')
             });
         });
     </script>
