@@ -166,26 +166,14 @@
 
     <!-- Меню -->
     <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white"></div>
+    <div class="side-menu side-menu-bg" id="bg-image-holder-menu">BACKGROUND</div>   
     <div class="side-menu">
-
         <ul class="side-menu__channels">
             <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>abgar.bar</a></li>
             <li class="side-menu__channels-item"><a href="./index.html">negroni cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
             <li class="side-menu__channels-item"><a href="./index.html">aerobic cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
             <li class="side-menu__channels-item"><a href="./index.html">ibiza cocktail <p class="side-menu__app_muted small_10">coming soon</p></a></li>
-        </ul>
-
-        <!-- <div class="side-menu__app">
-            <div class="accordion">
-                <section class="accordion_item">
-                    <p class="title_block">установи иконку на главный экран</p>
-                    <div class="info">
-                        <a class="info_item iphone_description popup_button open-popup">на ios</a>
-                        <a class="info_item android_description popup_button open-popup">на android</a>
-                    </div>
-                </section>
-            </div>
-        </div> -->
+        </ul>      
 
         <div class="side-menu__app">
             <div class="side-menu__app_muted">установи иконку на главный экран</div>
@@ -277,6 +265,7 @@
                     var imageUrl = $(mutationRecord.target).css('background-image');
                     $('#bg-image-holder').css('background-image', imageUrl);
                     $('#bg-image-holder-modal').css('background-image', imageUrl);
+                    $('#bg-image-holder-menu').css('background-image', imageUrl);
                     $('#track-image').css('background-image', imageUrl);
                     metaImage = imageUrl;
                     updateMediaSession();

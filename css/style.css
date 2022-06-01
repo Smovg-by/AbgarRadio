@@ -827,6 +827,7 @@ body {
     transform: translateX(-100%);
   }
 }
+
 .side-menu {
   z-index: 100;
   position: absolute;
@@ -840,9 +841,28 @@ body {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
-  background-size: cover;
-  background-color: #000;
 }
+
+.side-menu-bg {
+  z-index: 90;
+  position: absolute;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url(https://abgar.bar/images/logo-500x500.jpg);
+  filter: blur(20px) grayscale(30%) brightness(40%);
+  -webkit-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  transform: translateX(-100%);
+  background-size: cover;
+  background-position: top center;
+    background-repeat: no-repeat;
+}
+
 .side-menu__slide_in {
   -webkit-animation: slide-in 1.1s forwards;
   animation: slide-in 1.1s forwards;
@@ -1180,7 +1200,7 @@ body {
 
 .os-icon {
   width: 50px;
-  height: 50px;
+  height: 48px;
   margin: 0 auto;
   margin-top: -25px;
   margin-bottom: 20px;
@@ -1199,7 +1219,7 @@ body {
 
 .modal-bg {
   background-image: url(https://abgar.bar/images/logo-500x500.jpg);
-  filter: contrast(0.7) blur(40px) !important;
+  filter: contrast(0.5) blur(40px) grayscale(0%) brightness(100%);
   height: 100%;
   background-position: top center;
   background-repeat: no-repeat;
@@ -1207,7 +1227,7 @@ body {
   position: absolute;
   -moz-transition: background-image 0.5s ease-in-out;
   -webkit-transition: background-image 0.5s ease-in-out;
-  -o-transition: background-image 0.5s ease-in-out;  
+  -o-transition: background-image 0.5s ease-in-out; 
 }
 
 .small_10 {
