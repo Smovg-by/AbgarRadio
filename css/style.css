@@ -81,7 +81,7 @@ body {
   top: 0;
   display: none;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -91,12 +91,12 @@ body {
 }
 
 .side-menu-bg {
-  z-index: 90;
+  z-index: 100;
   position: absolute;
   top: 0;
   display: none;
   width: 100%;
-  height: auto;
+  /* height: auto; */
   min-height: 100vh;
   margin: 0;
   padding: 0;
