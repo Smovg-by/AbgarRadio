@@ -41,7 +41,7 @@
 <!-- Настройки плеера -->
 
 <body class="d-flex h-100 text-center text-white bg-dark" id="radioheart-player"
-    data-stream="https://listen.myrh.ru/id059289" data-autostart="true" data-volume="1"
+    data-stream="https://listen.myrh.ru/id059289" data-autostart="false" data-volume="1"
     data-logo="https://abgar.bar/images/logo-500x500.jpg" data-playtext=" ">
 
     <div class="bg-image w-100" id="bg-image-holder"></div>
@@ -106,14 +106,7 @@
                             </g>
                         </g>
                     </svg>
-
                 </div>
-                <!--<h3 class="float-md-start mb-0">Cover</h3>-->
-                <!--<nav class="nav nav-masthead justify-content-center float-md-end">-->
-                <!--  <a class="nav-link active" aria-current="page" href="#">Home</a>-->
-                <!--  <a class="nav-link" href="#">Features</a>-->
-                <!--  <a class="nav-link" href="#">Contact</a>-->
-                <!--</nav>-->
             </div>
         </header>
 
@@ -168,6 +161,7 @@
     <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white"></div>
     <div class="side-menu side-menu-bg" id="bg-image-holder-menu">BACKGROUND</div>
     <div class="side-menu">
+
         <ul class="side-menu__channels">
             <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>abgar.bar</a>
             </li>
@@ -205,10 +199,12 @@
             <li class="side-menu__about-item">BGRNDSGN&nbsp;&nbsp;<div class="moon_icon"></div>&nbsp;&nbsp;ANYWAYDIE
             </li>
         </ul>
+
     </div>
 
     <!-- иконка на главный экран iphone -->
-    <div class="modal-bg" id="bg-image-holder-modal" style='z-index: 250'></div>
+    <div class="modal-bg" id="bg-image-holder-modal"></div>
+
     <div class="instructions_popup iphone hidden">
         <div class="os-icon os-apple"></div>
         <span class="close-popup"></span>
@@ -216,8 +212,6 @@
         <p>В появившемся меню выбери «На экран «Домой» — иконка радио появится на рабочем столе твоего iPhone</p>
     </div>
 
-
-    <div class="modal-bg" id="bg-image-holder-modal"></div>
     <div class="instructions_popup android hidden">
         <div class="os-icon os-android"></div>
         <span class="close-popup"></span>
@@ -230,13 +224,13 @@
     <!-- иконка на главный экран iphone -->
     <!-- Конец бокового меню -->
 
-
+    <!-- начало Скрипт радио -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://player.radioheart.ru/js/app.js"></script>
     <script type="text/javascript" src="js/side-menu.js"></script>
-
+    <!-- конец Скрипт радио -->
 
     <script>
         $(document).ready(function () {
@@ -264,7 +258,6 @@
                     });
                 }
             }
-
 
             // Update background image.
             var observer = new MutationObserver(function (mutations) {
@@ -303,18 +296,6 @@
             var target = document.getElementById('radioheart-player-current-song');
             observer.observe(target, { attributes: true, attributeFilter: ['data-marquee'] });
 
-
-            // setInterval(function() {
-            // 	var songName = $('#radioheart-player-current-song').attr('data-marquee').split('-');
-            // 	console.log(songName);
-            // 	  // if (songName[0]) {
-            // 	  // 		$('#song-artist').text(songName[0].trim());
-            // 	  // }
-            // 	  // if (songName[1]) {
-            // 			// $('#song-name').text(songName[1].trim());
-            // 	  // }
-            // }, 3000);
-
             // POPUP
 
             $('.iphone_description').click(function (e) {
@@ -352,20 +333,6 @@
                 $('.bi').removeClass('invisible')
             });
         });
-    </script>
-
-    <script type="text/javascript">
-        ! function (i) {
-            var o, n;
-            i(".title_block").on("click", function () {
-                o = i(this).parents(".accordion_item"), n = o.find(".info"),
-                    o.hasClass("active_block") ? (o.removeClass("active_block"),
-                        n.slideUp()) : (o.addClass("active_block"), n.stop(!0, !0).slideDown(),
-                            o.siblings(".active_block").removeClass("active_block").children(
-                                ".info").stop(!0, !0).slideUp())
-            })
-        }(jQuery);
-
     </script>
 
     <!-- Yandex.Metrika counter -->
