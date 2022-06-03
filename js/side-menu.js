@@ -7,9 +7,11 @@ $(function () {
         var $button = $(this);
         var $menu = $('.side-menu');
         var $content = $('#content');
+        var $footer = $('.cover-container')
 
         $button.toggleClass('side-menu__toggle-button_open');
         $button.toggleClass('side-menu__toggle-button_closed');
+        $footer.toggleClass('invisible');
 
         if ($button.hasClass('side-menu__toggle-button_open')) {
 
