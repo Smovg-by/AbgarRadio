@@ -943,6 +943,11 @@ body {
   margin-top: 10px;
 }
 
+.buttons_container a {
+  margin-bottom: 14px;
+  display: block;
+}
+
 .side-menu__app_muted {
   color: #919191;
   font-family: "Raleway", sans-serif;
@@ -1155,7 +1160,6 @@ body {
   display: block;
   text-decoration: none;
   text-align: center;
-  /* margin-top: 10px; */
   background: inherit;
   max-width: 250px;
 }
