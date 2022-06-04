@@ -317,3 +317,36 @@ body {
   background-size: 20px 20px;
   margin-bottom: -6px;
 }
+
+.cover-container {
+  transition: 0.5s;
+}
+
+/* donate icon styles START*/
+
+.donate-icon {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	top: 45px;
+	right: 20px;
+	background: #5a5a5a;  
+  opacity: 0.8;
+	border-radius: 50%;
+	transition: 0.5s;
+	z-index: 100;
+}
+
+.donate-icon:after {
+	content: "";
+	position: absolute;
+	background: url("/img/icon-heart.svg");
+	background-size: contain;
+	width: 18px;
+	height: 18px;
+	left: 11px;
+	top: 12px;
+}
+
+/* donate icon styles END*/
