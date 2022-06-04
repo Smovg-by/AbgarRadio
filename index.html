@@ -114,7 +114,7 @@
 
         <main class="px-3">
             <div id="radioheart-player-logo" class="d-none"></div>
-            <div id="track-image" class="player-image rounded-circle mb-5"></div>
+            <div id="track-image" class="player-image rounded-circle mb-4"></div>
             <div class="current-song marquee" id="radioheart-player-current-song" data-marquee="">
             </div>
             <div id="song-artist">&nbsp;</div>
@@ -123,6 +123,7 @@
 
         <footer class="flex-column mt-auto mb-auto py-2 justify-content-center">
             <div class="footer-controls d-flex ">
+
                 <div class="footer-controls__icon footer-controls__order"></div>
 
                 <div class="play" id="radioheart-player-play">
@@ -140,9 +141,9 @@
                     </svg>
                 </div>
                 <div class="footer-controls__icon footer-controls__share">
-                    <svg fill="currentColor" style="color: rgba(255, 255, 255, 0.5)" height="35px" width="35px"
-                        id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512"
-                        width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    <svg fill="currentColor" height="35px" width="35px" id="Layer_1"
+                        style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px"
+                        xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink">
                         <g>
                             <path
@@ -254,6 +255,15 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://player.radioheart.ru/js/app.js"></script>
     <!-- конец Скрипт радио -->
+
+    <script>
+        // autoplay player on load page
+        $(document).ready(function () {
+            setTimeout(() => {
+                $("#radioheart-player-play").click();
+            }, 2000)
+        });
+    </script>
 
     <script type="text/javascript" src="js/side-menu.js"></script>
     <script type="text/javascript" src="js/player-ui-data-update.js"></script>

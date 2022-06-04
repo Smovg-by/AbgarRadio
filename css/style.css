@@ -39,13 +39,13 @@ body {
   justify-content: center;
 }
 
-
 .footer-controls__icon {
   height: 35px;
   width: 35px;
   background-size: 35px 35px;
   background-repeat: no-repeat;
   filter: invert(100%);
+  color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .footer-controls__order {
