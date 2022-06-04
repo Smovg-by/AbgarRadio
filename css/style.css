@@ -95,7 +95,7 @@ body {
   top: 0;
   display: none;
   width: 100%;
-  min-height: 100vh; 
+  min-height: 100vh;
   margin: 0;
   padding: 0;
   background-image: url(https://abgar.bar/images/logo-500x500.jpg);
@@ -309,6 +309,7 @@ body {
 .small_10 {
   font-size: 10px;
 }
+
 .moon_icon {
   display: inline-block;
   height: 20px;
@@ -325,28 +326,72 @@ body {
 /* donate icon styles START*/
 
 .donate-icon {
-	display: block;
-	width: 40px;
-	height: 40px;
-	position: fixed;
-	top: 45px;
-	right: 20px;
-	background: #5a5a5a;  
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  top: 45px;
+  right: 20px;
+  background: #5a5a5a;
   opacity: 0.8;
-	border-radius: 50%;
-	transition: 0.5s;
-	z-index: 100;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: 100;
 }
 
 .donate-icon:after {
-	content: "";
-	position: absolute;
-	background: url("/img/icon-heart.svg");
-	background-size: contain;
-	width: 18px;
-	height: 18px;
-	left: 11px;
-	top: 12px;
+  content: "";
+  position: absolute;
+  background: url("/img/icon-heart.svg");
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  left: 11px;
+  top: 12px;
 }
 
 /* donate icon styles END*/
+
+/* footer menu styles START*/
+
+.footer-menu {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.footer-menu__sign {
+  color: #919191;
+}
+
+.footer-menu__item {
+  width: 65px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid red; */
+}
+
+.footer-menu__icon {
+  height: 35px;
+  width: 35px;
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+}
+
+.footer-menu__main {
+  background-image: url("/img/home-icon.svg");
+}
+.footer-menu__recently {
+  background-image: url("/img/recently-icon.svg");
+}
+.footer-menu__next {
+  background-image: url("/img/next-icon.svg");
+  transform: rotate(180);
+}
+.footer-menu__search {
+  background-image: url("/img/search-icon.svg");
+}
+
+/* footer menu styles END*/
