@@ -11,18 +11,55 @@ body {
   visibility: hidden !important;
 }
 
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* controls menu styles START*/
+
 .play,
 .pause {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
   cursor: pointer;
   color: rgba(255, 255, 255, 0.5);
+  margin: 0 60px 0 60px;
 }
 .play:hover,
 .pause:hover {
   color: #fff;
 }
 .footer-controls {
+  align-items: center;
   background: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  justify-content: center;
 }
+
+
+.footer-controls__icon {
+  height: 35px;
+  width: 35px;
+  background-size: 35px 35px;
+  background-repeat: no-repeat;
+  filter: invert(100%);
+}
+
+.footer-controls__order {
+  background-image: url("/img/order-icon.svg");
+}
+.footer-controls__share {
+  background-image: url("/img/share-icon.svg");
+}
+.footer-controls__reload {
+  margin-top: 40px;
+  background-image: url("/img/reload-icon.svg");
+}
+
+/* controls menu styles END*/
 
 .bg-image {
   background-image: url(https://abgar.bar/images/logo-500x500.jpg);
@@ -358,6 +395,7 @@ body {
   display: flex;
   justify-content: space-around;
   margin: 20px 0;
+  width: 100vw;
 }
 
 .footer-menu__sign {
