@@ -281,7 +281,8 @@
         // autoplay player on load page
         $(document).ready(function () {
             setTimeout(() => {
-                $("#radioheart-player-play").click();
+                // $("#radioheart-player-play").click();
+                $("#radioheart-player-play").trigger('click');
             }, 2000)
         });
     </script>
