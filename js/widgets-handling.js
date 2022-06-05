@@ -1,5 +1,5 @@
 $(function () {
-    'use strict';   
+    'use strict';
 
     $('#next-button').on('click', function (e) {
         $("#next-widget span").trigger('click')
@@ -9,10 +9,13 @@ $(function () {
     });
     $('#order-button').on('click', function (e) {
         $("#order-widget span").trigger('click')
-    });   
+    });
 
     //share modal
     $('#share-button').on('click', function (e) {
-        $('.share-modal').removeClass('invisible')
-    });   
+        $('.share-modal').removeClass('hidden')
+    });
+    $('#close-widget-button').on('click', function (e) {
+        $('.share-modal').addClass('hidden')
+    });
 });
