@@ -433,3 +433,14 @@ body {
 }
 
 /* footer menu styles END*/
+
+/* widgets styling START */
+
+/* hide widgets div, cause wrapping in this div disable radio playing */
+
+#rh-widgets {
+  position: absolute;
+  font-size: 0;
+}
+
+/* widgets styling END */

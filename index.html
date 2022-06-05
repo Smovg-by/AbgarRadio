@@ -42,13 +42,9 @@
 
 <!-- Настройки плеера -->
 
-<bodyclass="d-flex h-100 text-center text-white bg-dark" id="radioheart-player"
+<body class="d-flex h-100 text-center text-white bg-dark" id="radioheart-player"
     data-stream="https://listen.myrh.ru/id059289" data-autostart="false" data-volume="1"
     data-logo="https://abgar.bar/images/logo-500x500.jpg" data-playtext=" ">
-
-
-
-
 
     <div class="bg-image w-100" id="bg-image-holder"></div>
     <div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
@@ -129,7 +125,7 @@
         <footer class="flex-column mt-auto mb-auto py-2 justify-content-center">
             <div class="footer-controls d-flex ">
 
-                <div class="footer-controls__icon footer-controls__order"></div>
+                <div class="footer-controls__icon footer-controls__order" id="order-button"></div>
 
                 <div class="play" id="radioheart-player-play">
                     <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
@@ -145,7 +141,7 @@
                             d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
                     </svg>
                 </div>
-                <div class="footer-controls__icon footer-controls__share">
+                <div class="footer-controls__icon footer-controls__share" id="share-button">
                     <svg fill="currentColor" height="35px" width="35px" id="Layer_1"
                         style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px"
                         xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
@@ -157,22 +153,22 @@
                     </svg>
                 </div>
             </div>
-            <div class="footer-controls__icon footer-controls__reload"></div>
+            <div class="footer-controls__icon footer-controls__reload" onClick="window.location.reload()"></div>
         </footer>
 
-        
+
 
 
         <div class="footer-menu">
-            <div class="footer-menu__item">
+            <div class="footer-menu__item" id="home-button">
                 <div class="footer-menu__icon footer-menu__main"></div>
                 <span class="footer-menu__sign" style="color: white">home</span>
             </div>
-            <div class="footer-menu__item">
+            <div class="footer-menu__item" id="recently-button">
                 <div class="footer-menu__icon footer-menu__recently"></div>
                 <span class="footer-menu__sign">recently</span>
             </div>
-            <div class="footer-menu__item">
+            <div class="footer-menu__item" id="next-button">
                 <svg fill="currentColor" height="35" viewBox="0 0 48 48" width="35" xmlns="http://www.w3.org/2000/svg"
                     class="bi bi-play" style="color: rgba(255, 255, 255, 0.5)">
                     <path d="M0 0h48v48h-48z" fill="none" />
@@ -181,7 +177,7 @@
                 </svg>
                 <span class="footer-menu__sign" style="color: white">next</span>
             </div>
-            <div class="footer-menu__item">
+            <div class="footer-menu__item" id="search-button">
                 <div class="footer-menu__icon footer-menu__search"></div>
                 <span class="footer-menu__sign">search</span>
             </div>
@@ -262,12 +258,14 @@
 
     <!-- иконка на главный экран iphone -->
     <!-- Конец бокового меню -->
-    
 
     <div id="rh-widgets">
         <radioheart logo="https://billing.radioheart.ru/public_pages/assets/img/rh-wave-logo.jpg" locale="ru"
             ref="radioheart" api-endpoint="https://a3.radioheart.ru/api/json?userlogin=user8004">
-            <a href="javascript://" @click="trigger('nextTracks')">Далее в эфире</a>
+            <a href="javascript://" @click="trigger('nextTracks')" id="next-widget"><span>Далее в эфире</span></a>
+            <a href="javascript://" @click="trigger('prevTracks')" id="recently-widget"><span>Ранее в эфире</span></a>
+            <a href="javascript://" @click="trigger('newTracks')" id="new-widget"><span>Новинки эфира</span></a>
+            <a href="javascript://" @click="trigger('orderTrack')" id="order-widget"><span>Заказ треков</span></a>
         </radioheart>
     </div>
 
@@ -291,9 +289,11 @@
     <script type="text/javascript" src="js/side-menu.js"></script>
     <script type="text/javascript" src="js/player-ui-data-update.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/widgets-handling.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/manifest.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/vendor.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/app.js"></script>
+
 
     <!-- Yandex.Metrika counter -->
 
