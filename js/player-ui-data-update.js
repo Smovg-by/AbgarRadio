@@ -60,7 +60,7 @@ $(document).ready(function () {
 
             setTimeout(() => {
                 $('.spinner').addClass('invisible')
-            }, 2000)
+            }, 3000)
 
             updateMediaSession();
         });
