@@ -40,11 +40,15 @@ $(document).ready(function () {
     var target = document.getElementById('radioheart-player-logo');
     observer.observe(target, { attributes: true, attributeFilter: ['style'] });
 
+    $('#radioheart-player-play').click(function () {
+        $('.spinner').removeClass('invisible')
+    })
+
     //Update track name.
     var observer = new MutationObserver(function (mutations) {
         mutations.forEach(function (mutationRecord) {
             var songName = $(mutationRecord.target).attr('data-marquee').split('-');
-            console.log(songName);
+
             if (songName[0]) {
                 $('#song-artist').text(songName[0].trim());
                 metaArtist = songName[0].trim();
@@ -54,11 +58,15 @@ $(document).ready(function () {
                 metaSongName = songName[1].trim();
             }
 
+            setTimeout(() => {
+                $('.spinner').addClass('invisible')
+            }, 800)
+
             updateMediaSession();
         });
     });
 
     var target = document.getElementById('radioheart-player-current-song');
-    observer.observe(target, { attributes: true, attributeFilter: ['data-marquee'] })   
+    observer.observe(target, { attributes: true, attributeFilter: ['data-marquee'] })
 
 });
