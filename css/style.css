@@ -21,17 +21,39 @@ body {
 
 .play,
 .pause {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  cursor: pointer;
+  height: 70px;
+  width: 70px;
   color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
   margin: 0 50px;
 }
+
+.play > svg {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.pause > svg {
+  margin-top: 5px;  
+}
+
 .play:hover,
 .pause:hover {
   color: #fff;
 }
+
+.reload,
+.order {
+  height: 45px;
+  width: 45px !important;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;  
+  display: flex;
+  justify-content: center;
+}
+
 .footer-controls {
   align-items: center;
   /* background: rgba(0, 0, 0, 0.3); */
@@ -83,7 +105,7 @@ body {
 }
 #song-artist {
   font-weight: 400;
-  font-size: 1.5rem;
+  font-size: 1.38rem;
 }
 #song-name {
   font-weight: 400;
@@ -367,7 +389,7 @@ body {
   position: fixed;
   top: 45px;
   right: 20px;
-  background: #5a5a5a;
+  background: rgba(255, 255, 255, 0.3);
   opacity: 0.8;
   border-radius: 50%;
   transition: 0.5s;
@@ -392,8 +414,9 @@ body {
 .footer-menu {
   display: flex;
   justify-content: space-around;
-  margin: 0 0 30px 0;
+  padding: 25px 0;
   width: 100vw;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .footer-menu__sign {
@@ -405,7 +428,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border: 1px solid red; */
 }
 
 .footer-menu__icon {
