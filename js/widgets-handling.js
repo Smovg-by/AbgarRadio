@@ -15,7 +15,15 @@ $(function () {
     $('#share-button').on('click', function (e) {
         $('.share-modal').removeClass('hidden')
     });
-    $('#close-widget-button').on('click', function (e) {
+    $('#close-share-widget-button').on('click', function (e) {
         $('.share-modal').addClass('hidden')
+    });
+
+    //donate modal
+    $('#donate-button').on('click', function (e) {
+        $('.donate-modal').removeClass('hidden')
+    });
+    $('#close-donate-widget-button').on('click', function (e) {
+        $('.donate-modal').addClass('hidden')
     });
 });

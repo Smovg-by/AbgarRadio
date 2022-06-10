@@ -9,7 +9,7 @@ $(document).ready(function () {
     function updateMediaSession() {
         if ('mediaSession' in navigator) {
             if (metaImage == '') {
-                metaImage = 'https://abgar.bar/images/logo-500x500.jpg';
+                metaImage = '/imag/logo-500x500.jpg';
             }
             else {
                 metaImage = metaImage.slice(4, -1).replace(/"/g, "");
