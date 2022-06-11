@@ -173,28 +173,32 @@ body {
   animation: slide-out 1.1s forwards;
 }
 .side-menu__toggle-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   top: 38px;
   left: 16px;
   z-index: 220;
   cursor: pointer;
   border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
 }
 .side-menu__toggle-button_open {
   width: 50px;
   height: 50px;
-  background: url("/img/icons.png?") -150px -350px !important;
+  /* background: url("/img/icons.png?") -150px -350px !important; */
 }
 .side-menu__toggle-button_closed {
   width: 50px;
   height: 50px;
 }
-.side-menu__toggle-button-white {
+/* .side-menu__toggle-button-white {
   background: url("/img/icons.png?") -50px -350px;
 }
 .side-menu__toggle-button-black {
   background: url(/img/icons.png?) 0px -350px;
-}
+} */
 .side-menu__channels {
   display: block;
   text-align: center;

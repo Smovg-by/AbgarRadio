@@ -228,10 +228,23 @@
     </div>
     <!-- Настройки плеера -->
 
-
-
     <!-- Меню -->
-    <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white"></div>
+    <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white">
+        <svg id='arrow-button' style='display: none' width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-arrow-left">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+          <svg id='burger-button' width="72px" height="72px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
+            <g id="line">
+                <line x1="16" x2="56" y1="26" y2="26" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                <line x1="16" x2="56" y1="36" y2="36" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                <line x1="16" x2="56" y1="46" y2="46" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+            </g>
+        </svg>
+    </div>
+
     <div class="side-menu side-menu-bg" id="bg-image-holder-menu">BACKGROUND</div>
     <div class="side-menu">
 
@@ -276,9 +289,6 @@
 
     </div>
 
-
-
-
     <!-- иконка на главный экран iphone -->
     <div class="modal-bg" id="bg-image-holder-modal"></div>
 
@@ -299,6 +309,7 @@
     </div>
 
     <!-- иконка на главный экран iphone -->
+
     <!-- Конец бокового меню -->
 
     <div class="share-modal widget__modal" style="display: none">
