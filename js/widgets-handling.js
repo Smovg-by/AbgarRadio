@@ -13,17 +13,17 @@ $(function () {
 
     //share modal
     $('#share-button').on('click', function (e) {
-        $('.share-modal').removeClass('hidden')
+        $('.share-modal').fadeIn(300)
     });
     $('#close-share-widget-button').on('click', function (e) {
-        $('.share-modal').addClass('hidden')
+        $('.share-modal').fadeOut(300)
     });
 
     //donate modal
     $('#donate-button').on('click', function (e) {
-        $('.donate-modal').removeClass('hidden')
+        $('.donate-modal').fadeIn(300)
     });
     $('#close-donate-widget-button').on('click', function (e) {
-        $('.donate-modal').addClass('hidden')
+        $('.donate-modal').fadeOut(300)
     });
 });
