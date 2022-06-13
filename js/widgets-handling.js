@@ -26,4 +26,8 @@ $(function () {
     $('#close-donate-widget-button').on('click', function (e) {
         $('.donate-modal').fadeOut(300)
     });
+
+    $('.widget__modal-background').on('click', function () {
+        $(".donate-modal").fadeOut(300);
+    })
 });
