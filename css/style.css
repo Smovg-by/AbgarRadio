@@ -502,6 +502,11 @@ body {
 
 .widget__modal {
   font-family: "Raleway", sans-serif !important;
+  height: 90vh !important;
+}
+
+.widget__modal__content {
+  max-height: unset !important;
 }
 
 .widget-button:hover {
@@ -543,7 +548,7 @@ body {
 .order-widget__title {
   font-size: 16px;
   font-weight: 700;
-  line-height: 29px;
+  line-height: 29px !important;
   color: #000 !important;
 }
 
