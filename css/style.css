@@ -505,6 +505,7 @@ body {
 }
 
 .widget__modal-background {
+  position: fixed;
   height: 100vh !important;
 }
 
