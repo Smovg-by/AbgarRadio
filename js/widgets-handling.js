@@ -29,5 +29,6 @@ $(function () {
 
     $('.widget__modal-background').on('click', function () {
         $(".donate-modal").fadeOut(300);
+        $(".share-modal").fadeOut(300);
     })
 });
