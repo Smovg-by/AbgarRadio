@@ -500,12 +500,82 @@ body {
   font-size: 0;
 }
 
-/* .share-modal {
-  position: absolute;
-  z-index: 1000;
-} */
+.widget__modal {
+  font-family: "Raleway", sans-serif !important;
+}
 
-.widget-content__block-inside {
+.widget-button:hover {
+  background: #919191 !important;
+  border-color: #919191 !important;
+}
+
+.order-widget__scrollable-body {
+  color: #000;
+}
+
+.order-widget {
+  padding-bottom: 16px !important;
+}
+
+.order-widget__results-block-title {
+  text-align: left;
+  font-weight: 600;
+  margin: 0 !important;
+}
+
+.order-widget__results-block-item {
+  text-align: left;
+  margin-bottom: 8px !important;
+}
+
+.order-widget__results-block-item-song {
+  font-weight: 400 !important;
+  margin: 0 !important;
+}
+
+.order-widget__results-block-item-button {
+  font-weight: 600;
+  color: #000 !important;
+  height: 30px !important;
+  min-width: 60px !important;
+}
+
+.order-widget__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 29px;
+  color: #000 !important;
+}
+
+.order-widget-horizontal-scroll {
+  overflow: unset !important;
+  margin-bottom: 15px !important;
+}
+
+.order-widget__search-row {
+  display: contents !important;
+}
+
+.order-widget__search-row span {
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.order-widget__results-block {
+  margin: 0 !important;
+}
+
+.order-widget__footer-logo {
+  display: none !important;
+}
+
+.order-widget__input-block__button {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+}
+
+.widget-content__block-inside.donate {
   display: flex;
   flex-direction: column;
   align-items: center;
