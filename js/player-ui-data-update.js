@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+  setTimeout(() => {
+    $(".spinner").addClass("invisible");
+  }, 1500);
+
   $("#track-image").css(
     "background-image",
     $("#radioheart-player-logo").css("background-image")
@@ -58,11 +63,11 @@ $(document).ready(function () {
       }
 
       //show search modal if song title is loaded
-    //   if ($("#song-name").text().length > 1) {
-    //     $("#search-button").click(function () {
-    //       $("#search_container").fadeToggle(300);
-    //     });
-    //   }
+      //   if ($("#song-name").text().length > 1) {
+      //     $("#search-button").click(function () {
+      //       $("#search_container").fadeToggle(300);
+      //     });
+      //   }
 
       //hide spinner if song title is loaded
       setTimeout(() => {
