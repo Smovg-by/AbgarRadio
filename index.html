@@ -336,9 +336,23 @@
                         Нравится Abgar.bar Radio?
                     </span></div>
                 <div class="widget-content__block-inside share-modal">
+                    <div class="radio-icon mb-2"></div>
                     <p>Расскажите о станции друзьям</p>
-                    <div>***иконки***</div>
-                    <p>Скопировать ссылку на радио в буфер обмена</p>
+                    <div class="social-icons-container">
+                        <div class="social-icon telegram"></div>
+                        <div class="social-icon whatsapp"></div>
+                        <div class="social-icon instagram"></div>
+                        <div class="social-icon vk"></div>
+                        <div class="social-icon twitter"></div>
+                        <div class="social-icon viber"></div>
+                        <div class="social-icon ok"></div>
+                        <div class="social-icon linkedin"></div>
+                        <div class="social-icon skype"></div>
+                        <div class="social-icon pinterest"></div>
+                    </div>
+                    <p>Скопировать ссылку на радио в буфер обмена
+                    <div class="copy-icon"></div>
+                    </p>
                 </div>
             </div>
         </div>
@@ -420,11 +434,11 @@
 
     <script>
         // autoplay player on load page -> does not work on ios
-        // $(document).ready(function () {
-        //     setTimeout(() => {
-        //         $("#radioheart-player-play").trigger('click');
-        //     }, 2000)
-        // });
+        $(document).ready(function () {
+            setTimeout(() => {
+                $("#radioheart-player-play").trigger('click');
+            }, 2000)
+        });
     </script>
 
     <script type="text/javascript" src="js/side-menu.js"></script>

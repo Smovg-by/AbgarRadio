@@ -32,5 +32,14 @@ $(function () {
         $(".donate-modal").fadeOut(300);
         $(".share-modal").fadeOut(300);
         $(".copy-link-modal").fadeOut(300);
+        // $('.footer-menu__item > svg').attr("style", "color: rgba(255, 255, 255, 0.5)");
+    })
+
+    //change icon colors on hover
+    $('.footer-menu__item > svg').mouseenter(function () {
+        $(this).attr("style", "color: white");
+    })
+    $('.footer-menu__item > svg').mouseleave(function () {
+        $(this).attr("style", "color: rgba(255, 255, 255, 0.5)");
     })
 });
