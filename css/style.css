@@ -627,17 +627,39 @@ body {
   margin: 0;
 }
 
-#send-donate-button {
-  width: 250px;
+.donate-modal .widget-content__block-inside {
+  padding: 0;
+}
+
+.send-donate-button {
+  max-width: 100%;
+  padding: 0 12px;
   height: 60px;
   border-radius: 10px;
   background-color: #919191;
   display: flex;
   align-items: center;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
-#send-donate-button a {
+.donate-sign {
+  /* white-space: nowrap; */
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #919191; 
+}
+
+.send-donate-button.primary {
+  background-color: blue;
+}
+
+.send-donate-button.secondary {
+  background-color: black;
+}
+
+.send-donate-button a {
   text-decoration: none;
   color: #fff;
 }
@@ -647,10 +669,12 @@ body {
 }
 
 .qr-code {
+  flex-shrink: 0;
   width: 100px;
   height: 100px;
+  margin-bottom: 16px;
   background-image: url("/img/donate-qr-code.png");
-  background-size: cover;
+  background-size: 100px 100px;
 }
 
 /* share modal START */
