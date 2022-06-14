@@ -326,7 +326,7 @@ body {
 }
 
 .os-apple {
-  background: url("/img/apple-icon.png") !important;  
+  background: url("/img/apple-icon.png") !important;
   filter: invert(100%);
 }
 
@@ -597,6 +597,11 @@ body {
   font-size: 16px;
   color: #000;
   font-weight: 600;
+}
+
+.order-widget__comment-block-info {
+  font-size: 16px;
+  color: #000;
 }
 
 .widget-content__block-inside.donate {
