@@ -697,49 +697,10 @@ body {
 }
 
 /* social icons */
-.social-icons-container {
+.ya-share2 > div > ul{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 15px;
+  gap: 10px;
   margin-bottom: 16px;
-}
-
-.social-icon {
-  flex-shrink: 0;
-  display: inline-block;
-  width: 35px;
-  height: 35px;
-  background-size: 35px 35px;
-}
-
-.social-icon.telegram {
-  background-image: url("/img/socials/Telegram.png");
-}
-.social-icon.whatsapp {
-  background-image: url("/img/socials/WhatsApp.png");
-}
-.social-icon.instagram {
-  background-image: url("/img/socials/Instagram.png");
-}
-.social-icon.vk {
-  background-image: url("/img/socials/VK.png");
-}
-.social-icon.twitter {
-  background-image: url("/img/socials/Twitter.png");
-}
-.social-icon.viber {
-  background-image: url("/img/socials/Viber.png");
-}
-.social-icon.ok {
-  background-image: url("/img/socials/Ok.png");
-}
-.social-icon.linkedin {
-  background-image: url("/img/socials/LinkedIn.png");
-}
-.social-icon.skype {
-  background-image: url("/img/socials/Skype.png");
-}
-.social-icon.pinterest {
-  background-image: url("/img/socials/Pinterest.png");
 }
