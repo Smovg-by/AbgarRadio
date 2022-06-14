@@ -27,8 +27,10 @@ $(function () {
         $('.donate-modal').fadeOut(300)
     });
 
+    //hide all modals on screen tap
     $('.widget__modal-background').on('click', function () {
         $(".donate-modal").fadeOut(300);
         $(".share-modal").fadeOut(300);
+        $(".copy-link-modal").fadeOut(300);
     })
 });
