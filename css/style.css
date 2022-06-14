@@ -684,13 +684,21 @@ body {
   background-size: 100px 100px;
 }
 
-.copy-icon {
-  display: inline-block;
-  padding: 20px;
+.copy-icon-wrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 50px;
   height: 50px;
+}
+
+.copy-icon {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
   background-image: url("/img/copy-icon.png");
-  background-size: 25px 25px;
+  background-size: 30px 30px;
   background-repeat: no-repeat;
 }
 
@@ -699,7 +707,7 @@ body {
 }
 
 /* social icons */
-.ya-share2 > div > ul{
+.ya-share2 > div > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
