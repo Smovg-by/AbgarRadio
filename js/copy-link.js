@@ -24,7 +24,7 @@ $(document).ready(function () {
     });
 
     $('.copy-icon').on("click", function () {
-        setTimeout(function () { copyToClipboard('https://abgar.bar/'); }, 1000);
+        setTimeout(function () { copyToClipboard('https://abgar.bar/'); }, 0);
 
     });
 
