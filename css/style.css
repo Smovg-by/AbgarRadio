@@ -701,16 +701,16 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 8px;
+  gap: 15px;
   margin-bottom: 16px;
 }
 
 .social-icon {
   flex-shrink: 0;
   display: inline-block;
-  width: 25px;
-  height: 25px;
-  background-size: 25px 25px;
+  width: 35px;
+  height: 35px;
+  background-size: 35px 35px;
 }
 
 .social-icon.telegram {
