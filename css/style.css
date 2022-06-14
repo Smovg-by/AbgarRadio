@@ -224,6 +224,10 @@ body {
   text-decoration: none;
 }
 
+.side-menu__channels-item_active {
+  color: #5d78c1;
+}
+
 /* --------------implement later when new radio channels will be added-------------- */
 /* .side-menu__channels-item a:hover {
   color: #6c6c6c;
