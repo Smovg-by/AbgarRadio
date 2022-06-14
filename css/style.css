@@ -492,7 +492,8 @@ body {
 #search_container > * {
   text-align: left;
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 11px;
+  font-size: 14px;
 }
 
 #search_container > a {
@@ -640,3 +641,11 @@ body {
   background-image: url("/img/donate-qr-code.png");
   background-size: cover;
 }
+
+/* share modal START */
+
+/* .share-modal {
+  background-color: #919191;
+} */
+
+/* share modal END */
