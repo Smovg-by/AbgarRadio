@@ -26,9 +26,9 @@ $(document).ready(function () {
         }
         else {
             copyToClipboard('https://abgar.bar/');
-            $(this).addClass('invisible');
-            $('copy-link-modal').fadeIn(300);;
-            $('.cover-wrapper').fadeOut(300);
+            // $(this).addClass('invisible');
+            $('.copy-link-modal').fadeIn(300);
+            // $('.cover-wrapper').fadeOut(300);
             timer = 0;
         }
     });
