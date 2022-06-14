@@ -230,10 +230,13 @@
 
     <!-- Меню -->
     <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white">
-        <svg id='arrow-button' style='display: none' width="30px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-arrow-left">
-            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-          </svg>
-          <svg id='burger-button' width="72px" height="72px" viewBox="0 0 72 72" id="emoji" xmlns="http://www.w3.org/2000/svg">
+        <svg id='arrow-button' style='display: none' width="30px" height="30px" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-arrow-left">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        <svg id='burger-button' width="72px" height="72px" viewBox="0 0 72 72" id="emoji"
+            xmlns="http://www.w3.org/2000/svg">
             <g id="line">
                 <line x1="16" x2="56" y1="26" y2="26" fill="none" stroke="#fff" stroke-linecap="round"
                     stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
@@ -373,6 +376,27 @@
         </div>
     </div>
 
+    <div class="copy-link-modal widget__modal" style="display: none">
+        <div class="widget__modal-background"></div>
+        <div class="widget__modal__content">
+            <div id="close-copy-link-widget-button" class="widget__modal__content__close"><svg width="18" height="18"
+                    viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="widget__modal__content__close__icon">
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 -0.707108 0.707106 0.707108 6.10352e-05 0.514282)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 0.707108 -0.707106 0.707108 17.4856 0)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                </svg></div>         
+            <div class="widget-content__block-item" prmarycolor="#3224d1">
+                <div class="widget-content__block-inside copy-link">
+                    <p>Ссылка на радио скопирована</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="rh-widgets">
         <radioheart logo="https://billing.radioheart.ru/public_pages/assets/img/rh-wave-logo.jpg" locale="ru"
             ref="radioheart" api-endpoint="https://a3.radioheart.ru/api/json?userlogin=user8004">
@@ -405,6 +429,7 @@
     <script type="text/javascript" src="js/popup.js"></script>
     <script type="text/javascript" src="js/widgets-handling.js"></script>
     <script type="text/javascript" src="js/search-modal.js"></script>
+    <script type="text/javascript" src="js/copy-link.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/manifest.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/vendor.js"></script>
     <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/app.js"></script>

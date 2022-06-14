@@ -4,18 +4,6 @@ $(document).ready(function () {
     $(".spinner").addClass("invisible");
   }, 1500);
 
-  //copy link on double tap
-
-  var timer = 0;
-  $('.cover-wrapper').on("click", function () {
-    if (timer == 0) {
-      timer = 1;
-      timer = setTimeout(function () { timer = 0; }, 600);
-    }
-    else { $(this).addClass('invisible'); timer = 0; }
-  });
-
-
   $("#track-image").css(
     "background-image",
     $("#radioheart-player-logo").css("background-image")
