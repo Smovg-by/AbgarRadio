@@ -632,8 +632,9 @@ body {
 }
 
 .send-donate-button {
+  flex-shrink: 0;
   max-width: 100%;
-  padding: 0 12px;
+  padding: 12px 12px;
   height: 60px;
   border-radius: 10px;
   background-color: #919191;
