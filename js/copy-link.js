@@ -22,6 +22,11 @@ $(document).ready(function () {
         }
     });
 
+    $('.copy-icon').on("click", function () {
+        copyToClipboard('https://abgar.bar/');
+
+    });
+
     //close copy modal
     $('#close-copy-link-widget-button').on('click', function () {
         $('.copy-link-modal').fadeOut(300)
