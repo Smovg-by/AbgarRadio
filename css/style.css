@@ -666,7 +666,8 @@ body {
 }
 
 .widget-content__block-inside {
-  max-height: 60vh !important;
+  /* set max hights in modals */
+  max-height: 80vh !important;
 }
 
 .qr-code {
