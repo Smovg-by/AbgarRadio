@@ -16,8 +16,9 @@ $(document).ready(function () {
             timer = setTimeout(function () { timer = 0; }, 500);
         }
         else {
-            copyToClipboard('this was copied')
+            copyToClipboard('https://abgar.bar/')
             $('copy-link-modal').fadeIn(300);
+            $('.cover-wrapper').fadeOut(300)
             timer = 0;
         }
     });
