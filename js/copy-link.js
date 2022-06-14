@@ -16,6 +16,7 @@ $(document).ready(function () {
             timer = setTimeout(function () { timer = 0; }, 500);
         }
         else {
+
             copyToClipboard('https://abgar.bar/');
             $('.copy-link-modal').fadeIn(300);
             timer = 0;
@@ -23,7 +24,7 @@ $(document).ready(function () {
     });
 
     $('.copy-icon').on("click", function () {
-        copyToClipboard('https://abgar.bar/');
+        setTimeout(function () { copyToClipboard('https://abgar.bar/'); }, 1000);
 
     });
 
