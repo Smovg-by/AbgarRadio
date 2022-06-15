@@ -494,6 +494,7 @@ body {
   left: -20px;
   color: #919191;
   background-color: #fff;
+  z-index: 250;
 }
 
 .search_container > * {
@@ -514,6 +515,15 @@ body {
 .search_container > div {
   color: #000;
   font-weight: 700;
+}
+
+.search-modal_bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 230;
 }
 
 /* footer menu styles END*/
@@ -681,7 +691,7 @@ body {
 
 .widget-content__block-inside {
   /* set max hights in modals */
-  max-height: 60vh !important;  
+  max-height: 60vh !important;
 }
 
 .widget-content__block-inside > p:nth-child(2) {

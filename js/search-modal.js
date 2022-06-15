@@ -70,13 +70,8 @@ $(function () {
 
         if (song.length > 1) {
             $(".search_container").fadeToggle(300);
-
-            if ($('#search-icon').attr("style") == 'color: white') {
-                $('#search-icon').attr("style", "color: rgba(255, 255, 255, 0.5)");
-            } else {
-                $('#search-icon').attr("style", "color: white");
-            }
-
+            $(".search-modal_bg").fadeIn();
+            $('#search-icon').attr("style", "color: white");
         }
 
         $(".search_container > a").remove();

@@ -36,6 +36,12 @@ $(function () {
         // $('.footer-menu__item > svg').attr("style", "color: rgba(255, 255, 255, 0.5)");
     })
 
+    $('.search-modal_bg').on('click', function () {
+        $(".search_container").fadeOut(300);
+        $(this).fadeOut();
+        $('#search-icon').attr("style", "color: rgba(255, 255, 255, 0.5)");
+    })
+
     //change icon colors on hover
     $('.footer-menu__item > svg:not([id="search-icon"])').mouseenter(function () {
         $(this).attr("style", "color: white");
