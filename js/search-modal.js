@@ -69,16 +69,16 @@ $(function () {
         const song = $("#song-name").text();
 
         if (song.length > 1) {
-            $("#search_container").fadeToggle(300);
+            $(".search_container").fadeToggle(300);
         }
 
-        $("#search_container > a").remove();
+        $(".search_container > a").remove();
 
         const querystring = (artist + "-" + song)
             .split(" ")
             .join("%20");
 
-        const rootElement = document.getElementById("search_container");
+        const rootElement = document.querySelector(".search_container");
 
         generateList(rootElement, linksData, querystring);
     });

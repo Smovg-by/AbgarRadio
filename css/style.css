@@ -481,7 +481,7 @@ body {
   position: relative;
 }
 
-#search_container {
+.search_container {
   /* display: flex;
   flex-direction: column;
   justify-content: flex-start; */
@@ -494,14 +494,14 @@ body {
   background-color: #fff;
 }
 
-#search_container > * {
+.search_container > * {
   text-align: left;
   display: block;
   margin-bottom: 11px;
   font-size: 14px;
 }
 
-#search_container > a {
+.search_container > a {
   display: block;
   text-decoration: none;
   color: #919191;
@@ -509,7 +509,7 @@ body {
   font-weight: 400;
 }
 
-#search_container > div {
+.search_container > div {
   color: #000;
   font-weight: 700;
 }
