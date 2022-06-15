@@ -25,7 +25,8 @@ $(document).ready(function () {
 
     $('.copy-icon').on("click", function () {
         setTimeout(function () { copyToClipboard('https://abgar.bar/'); }, 0);
-
+        $('.copy-notification-modal').fadeIn(300)
+        setTimeout(function () { $('.copy-notification-modal').fadeOut(300) }, 2500);
     });
 
     //close copy modal

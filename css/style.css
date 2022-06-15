@@ -361,7 +361,7 @@ body {
 .radio-icon {
   height: 70px;
   width: 70px;
-  margin: 0 auto;
+  margin: 0 auto 16px auto;
   border-radius: 15px;
   background: url("/img/logo-500x500.jpg");
   background-size: 70px 70px;
@@ -714,5 +714,9 @@ body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+.share-modal p:last-of-type {
+  margin-bottom: 0;
 }
