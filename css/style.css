@@ -644,6 +644,10 @@ body {
   margin: 0;
 }
 
+.widget__modal-background.copy-icon {
+  pointer-events: none;
+}
+
 .donate-modal .widget-content__block-inside {
   padding: 0;
 }
