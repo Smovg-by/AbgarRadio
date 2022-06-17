@@ -3,13 +3,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Enjoy favorite musical cocktails on Abgar.bar Radio</title>
     <meta name="description"
         content="Слушать музыку онлайн - это Abgar.bar Radio! Избранная поп-музыка, электро-инди, модная электроника, танцы и незабываемые музыкальные коктейли в нашем интернет радио. Наслаждайся!">
     <meta name="keywords"
         content="радио, музыка в стиле инди, интернет радио, музыкальное радио, радио музыка, слушать музыку онлайн, абгар бар, radio, internet radio, musical radio, radio music, indie music, listen music online, abgar bar">
-
     <!-- Bootstrap core CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -22,18 +21,20 @@
     <!-- Styling -->
     <link type="text/css" rel="stylesheet" href="css/style.css">
     <link type="text/css" rel="stylesheet" href="css/functional-styling.css">
+    <link type="text/css" rel="stylesheet" href="css/spinner.css">
+    <link href="https://widgets.radioheart.ru/static/css/app.css" rel="stylesheet" />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="manifest" href="site.html">
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#000000">
     <meta name="msapplication-TileColor" content="#000000">
     <meta name="theme-color" content="#000000">
 
     <meta property="og:title" content="Abgar.bar" />
-    <meta property="og:image" content="https://abgar.bar/images/logo-1200x630.jpg" />
+    <meta property="og:image" content="img/logo-1200x630.jpg" />
 
     <!-- Custom styles for this template -->
     <!--<link href="cover.css" rel="stylesheet">-->
@@ -109,62 +110,149 @@
                     </svg>
                 </div>
             </div>
+            <a id="donate-button" class="donate-icon" href="#" title="Я люблю Abgar.bar"></a>
         </header>
 
-        <main class="px-3" style="padding-bottom: 20%;">
+        <main class="px-3">
             <div id="radioheart-player-logo" class="d-none"></div>
-            <div id="track-image" class="player-image rounded-circle mb-5"></div>
+            <div id="track-image" class="player-image rounded-circle mb-4"></div>
             <div class="current-song marquee" id="radioheart-player-current-song" data-marquee="">
             </div>
             <div id="song-artist">&nbsp;</div>
             <div id="song-name">&nbsp;</div>
         </main>
 
-        <footer class="mt-auto footer-controls d-flex py-2 justify-content-center">
-            <div class="play" id="radioheart-player-play">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-play"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
-                </svg>
-            </div>
-            <div class="pause hidden" id="radioheart-player-pause">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-pause"
-                    viewBox="0 0 16 16">
-                    <path
-                        d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
-                </svg>
-            </div>
-            <div class="ms-5 volume-btn d-none">
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                    class="bi bi-volume-up-fill" viewBox="0 0 16 16">
-                    <path
-                        d="M11.536 14.01A8.473 8.473 0 0 0 14.026 8a8.473 8.473 0 0 0-2.49-6.01l-.708.707A7.476 7.476 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303l.708.707z" />
-                    <path
-                        d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.483 5.483 0 0 1 11.025 8a5.483 5.483 0 0 1-1.61 3.89l.706.706z" />
-                    <path
-                        d="M8.707 11.182A4.486 4.486 0 0 0 10.025 8a4.486 4.486 0 0 0-1.318-3.182L8 5.525A3.489 3.489 0 0 1 9.025 8 3.49 3.49 0 0 1 8 10.475l.707.707zM6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06z" />
-                </svg>
-                <div class="sound-control" style="width: 100px;">
-                    <div class="mute-control">
-                        <div class="mutecontrol active" id="radioheart-player-mute"></div>
-                    </div>
-                    <div class="volume-control" style="width: 100px;">
-                        <div class="volume w-100" id="radioheart-player-volume"></div>
-                    </div>
+        <footer class="flex-column mt-auto mb-auto py-2 justify-content-center">
+            <div class="footer-controls d-flex ">
+
+                <div class="footer-menu__item reload" onClick="window.location.reload()">
+                    <svg style="color: rgba(255, 255, 255, 0.5)" fill="currentColor" height="25" viewBox="0 0 48 48"
+                        width="25" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 12v6l8-8-8-8v6c-8.84 0-16 7.16-16 16 0 3.14.92 6.05 2.48 8.52l2.92-2.92c-.89-1.67-1.4-3.57-1.4-5.6 0-6.63 5.37-12 12-12zm13.52 3.48l-2.92 2.92c.89 1.67 1.4 3.57 1.4 5.6 0 6.63-5.37 12-12 12v-6l-8 8 8 8v-6c8.84 0 16-7.16 16-16 0-3.14-.92-6.05-2.48-8.52z" />
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                    </svg>
                 </div>
+
+                <div class="play" id="radioheart-player-play">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                        class="bi bi-play" viewBox="0 0 16 16">
+                        <path
+                            d="M10.804 8 5 4.633v6.734L10.804 8zm.792-.696a.802.802 0 0 1 0 1.392l-6.363 3.692C4.713 12.69 4 12.345 4 11.692V4.308c0-.653.713-.998 1.233-.696l6.363 3.692z" />
+                    </svg>
+                </div>
+                <div class="pause hidden" id="radioheart-player-pause">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="currentColor"
+                        class="bi bi-pause" viewBox="0 0 16 16">
+                        <path
+                            d="M6 3.5a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5zm4 0a.5.5 0 0 1 .5.5v8a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z" />
+                    </svg>
+                </div>
+
+                <div class="footer-menu__item share" id="share-button">
+                    <svg fill="currentColor" height="25" width="25" style="color: rgba(255, 255, 255, 0.5)"
+                        viewBox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg">
+                        <g>
+                            <path
+                                d="M64,400h10.3l19.2-31.2c20.5-32.7,44.9-62.8,75.8-76.6c24.4-10.9,46.7-18.9,86.7-20V352l192-128L256,96v80.3   c-63,2.8-108.1,20.7-143.3,56.2c-52.3,52.7-48.7,119-48.7,135.7C64.1,377.1,64,389.9,64,400z" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+
+            <div class="spinner">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+                <div class="bar4"></div>
+                <div class="bar5"></div>
+                <div class="bar6"></div>
+                <div class="bar7"></div>
+                <div class="bar8"></div>
+                <div class="bar9"></div>
+                <div class="bar10"></div>
+                <div class="bar11"></div>
+                <div class="bar12"></div>
             </div>
         </footer>
+
+
+        <div class="footer-menu">
+
+            <div class="search-wrapper">
+                <div class="footer-menu__item" id="search-button">
+                    <svg id="search-icon" fill="currentColor" height="23" viewBox="0 0 48 48" width="23"
+                        style="color: rgba(255, 255, 255, 0.5)" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M31 28h-1.59l-.55-.55c1.96-2.27 3.14-5.22 3.14-8.45 0-7.18-5.82-13-13-13s-13 5.82-13 13 5.82 13 13 13c3.23 0 6.18-1.18 8.45-3.13l.55.55v1.58l10 9.98 2.98-2.98-9.98-10zm-12 0c-4.97 0-9-4.03-9-9s4.03-9 9-9 9 4.03 9 9-4.03 9-9 9z" />
+                        <path d="M0 0h48v48h-48z" fill="none" />
+                    </svg>
+                </div>
+
+                <div class="search-modal_bg" style="display: none"></div>
+                <div class="search_container" style="display: none">
+                    <div>Искать трек</div>
+                </div>
+            </div>
+
+            <div class="footer-menu__item" id="recently-button">
+                <svg fill="currentColor" height="23" width="23" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgba(255, 255, 255, 0.5)">
+                    <path d="M0 0h48v48h-48z" fill="none" />
+                    <path
+                        d="M23.17 14.83l7.17 7.17h-28.34v4h28.34l-7.17 7.17 2.83 2.83 12-12-12-12-2.83 2.83zm16.83-2.83v24h4v-24h-4z" />
+                </svg>
+            </div>
+
+            <div class="footer-menu__item" id="next-button">
+                <svg fill="currentColor" height="23" width="23" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"
+                    style="color: rgba(255, 255, 255, 0.5)">
+                    <path d="M0 0h48v48h-48z" fill="none" />
+                    <path
+                        d="M23.17 14.83l7.17 7.17h-28.34v4h28.34l-7.17 7.17 2.83 2.83 12-12-12-12-2.83 2.83zm16.83-2.83v24h4v-24h-4z" />
+                </svg>
+            </div>
+
+            <div class="footer-menu__item" id="order-button">
+                <svg style="color: rgba(255, 255, 255, 0.5)" fill="currentColor" height="23" viewBox="0 0 512 512"
+                    width="23" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <polygon points="96,288 243,288 191.9,480 416,224 269,224 320,32 " />
+                </svg>
+            </div>
+
+        </div>
+
     </div>
     <!-- Настройки плеера -->
 
     <!-- Меню -->
-    <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white"></div>
+    <div class="side-menu__toggle-button side-menu__toggle-button_closed side-menu__toggle-button-white">
+        <svg id='arrow-button' style='display: none' width="30px" height="30px" viewBox="0 0 16 16"
+            xmlns="http://www.w3.org/2000/svg" fill="#fff" class="bi bi-arrow-left">
+            <path fill-rule="evenodd"
+                d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+        </svg>
+        <svg id='burger-button' width="72px" height="72px" viewBox="0 0 72 72" id="emoji"
+            xmlns="http://www.w3.org/2000/svg">
+            <g id="line">
+                <line x1="16" x2="56" y1="26" y2="26" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                <line x1="16" x2="56" y1="36" y2="36" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+                <line x1="16" x2="56" y1="46" y2="46" fill="none" stroke="#fff" stroke-linecap="round"
+                    stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" />
+            </g>
+        </svg>
+    </div>
+
     <div class="side-menu side-menu-bg" id="bg-image-holder-menu">BACKGROUND</div>
     <div class="side-menu">
 
         <ul class="side-menu__channels">
-            <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет"><a>abgar.bar</a>
+            <li class="side-menu__channels-item side-menu__channels-item_active" title="Cейчас играет">
+                <a>abgar.bar</a>
             </li>
             <li class="side-menu__channels-item"><a href="#">negroni cocktail<span
                         class="side-menu__app_muted small_10">&nbsp;soon</span></a></li>
@@ -185,7 +273,7 @@
         <div class="side-menu__app">
             <div class="side-menu__app_muted">будь на связи</div>
             <div class="buttons_container">
-                <div><a href="https://t.me/+WXprhKyD5m0xZDNi">чат abgar.bar radio</a></div>
+                <!-- <div><a href="https://t.me/+WXprhKyD5m0xZDNi">чат abgar.bar radio</a></div> -->
                 <div><a href="https://t.me/anywaydie">напиши мне</a></div>
             </div>
         </div>
@@ -211,6 +299,8 @@
         <span class="close-popup"></span>
         <p>Открой abgar.bar в браузере SAFARI и нажми на квадратик со стрелкой внизу экрана</p>
         <p>В появившемся меню выбери «На экран «Домой» — иконка радио появится на рабочем столе твоего iPhone</p>
+        <div class="radio-icon"></div>
+        <p class="icon-title">Abgar.bar</p>
     </div>
 
     <div class="instructions_popup android hidden">
@@ -220,10 +310,126 @@
             меню
         </p>
         <p>Выбери «Добавить на главный экран» — иконка радио появится на рабочем столе твоего смартфона</p>
+        <div class="radio-icon"></div>
+        <p class="icon-title">Abgar.bar</p>
     </div>
 
     <!-- иконка на главный экран iphone -->
+
     <!-- Конец бокового меню -->
+
+    <div class="share-modal widget__modal" style="display: none">
+        <div class="widget__modal-background"></div>
+        <div class="widget__modal__content">
+            <div id="close-share-widget-button" class="widget__modal__content__close"><svg width="18" height="18"
+                    viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="widget__modal__content__close__icon">
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 -0.707108 0.707106 0.707108 6.10352e-05 0.514282)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 0.707108 -0.707106 0.707108 17.4856 0)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                </svg></div>
+            <div class="widget-content__block-item" prmarycolor="#3224d1">
+                <div class="widget-content__block-title"><span
+                        class="widget-content__block-title__text widget-content__block-title__text--active">
+                        Нравится Abgar.bar Radio?
+                    </span></div>
+                <div class="widget-content__block-inside share-modal">
+                    <div class="radio-icon"></div>
+                    <p>Расскажи о станции друзьям</p>
+                    <div class="ya-share2" data-curtain data-shape="round" data-url="https://abgar.bar/"
+                        data-services="vkontakte,odnoklassniki,telegram,twitter,viber,whatsapp"></div>
+                    <p>Скопировать ссылку на радио в буфер обмена
+                    </p>
+                    <div class="copy-icon-wrapper">
+                        <div class="copy-icon"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="copy-notification-modal widget__modal" style="display: none">
+        <div class="widget__modal-background copy-icon"></div>
+        <div class="widget__modal__content">
+            <div class="widget-content__block-item" prmarycolor="#3224d1">
+                <div class="widget-content__block-inside share-modal">
+                    <p>Ссылка Abgar.bar скопирована в буфер обмена</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="donate-modal widget__modal" style="display: none">
+        <div class="widget__modal-background"></div>
+        <div class="widget__modal__content">
+            <div id="close-donate-widget-button" class="widget__modal__content__close"><svg width="18" height="18"
+                    viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="widget__modal__content__close__icon">
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 -0.707108 0.707106 0.707108 6.10352e-05 0.514282)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 0.707108 -0.707106 0.707108 17.4856 0)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                </svg></div>
+            <div class="widget-content__block-item" prmarycolor="#3224d1">
+                <div class="widget-content__block-title"><span
+                        class="widget-content__block-title__text widget-content__block-title__text--active">
+                        Спасибо за поддержку! 🥰🖤
+                    </span></div>
+                <div class="widget-content__block-inside donate">
+                    <p>Abgar.bar объединяет и делает <br>нас ближе 🐯👸</p>
+                    <p class="button-sign">Только вместе с тобой мы создадим лучшую радиостанцию на свете!</p>
+                    <div class="send-donate-button primary"><a href="https://pay.cloudtips.ru/p/323dc4dd">Отправить свой
+                            первый донат</a></div>
+                    <p class="donate-sign primary">Это очень просто, безопасно, а главное — очень приятно</p>
+                    <div class="send-donate-button secondary" class><a
+                            href="https://pay.cloudtips.ru/p/323dc4dd">Отправить донат и стать
+                            миллионером</a></div>
+                    <p class="donate-sign">Получи бесценные инсайты и живи в потоке</p>
+                    <div class="qr-code"></div>
+                    <p>Будь в ресурсе и помни — вселенная вернёт вдвойне 😜</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copy-link-modal widget__modal" style="display: none">
+        <div class="widget__modal-background"></div>
+        <div class="widget__modal__content">
+            <div id="close-copy-link-widget-button" class="widget__modal__content__close"><svg width="18" height="18"
+                    viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"
+                    class="widget__modal__content__close__icon">
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 -0.707108 0.707106 0.707108 6.10352e-05 0.514282)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                    <rect width="0.727307" height="24.7284"
+                        transform="matrix(0.707106 0.707108 -0.707106 0.707108 17.4856 0)"
+                        class="widget__modal__content__close__icon__path"></rect>
+                </svg></div>
+            <div class="widget-content__block-item" prmarycolor="#3224d1">
+                <div class="widget-content__block-inside copy-link">
+                    <p>Ссылка на радио скопирована</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="rh-widgets">
+        <radioheart logo="https://billing.radioheart.ru/public_pages/assets/img/rh-wave-logo.jpg" locale="ru"
+            ref="radioheart" api-endpoint="https://a3.radioheart.ru/api/json?userlogin=user8004">
+            <a href="javascript://" @click="trigger('nextTracks')" id="next-widget"><span>Далее в эфире</span></a>
+            <a href="javascript://" @click="trigger('prevTracks')" id="recently-widget"><span>Ранее в эфире</span></a>
+            <a href="javascript://" @click="trigger('newTracks')" id="new-widget"><span>Новинки эфира</span></a>
+            <a href="javascript://" @click="trigger('orderTrack')" id="order-widget"><span>Заказ треков</span></a>
+        </radioheart>
+    </div>
+
 
     <!-- начало Скрипт радио -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
@@ -232,9 +438,26 @@
     <script src="https://player.radioheart.ru/js/app.js"></script>
     <!-- конец Скрипт радио -->
 
+    <script>
+        // autoplay player on load page -> does not work on ios
+        // $(document).ready(function () {
+        //     setTimeout(() => {
+        //         $("#radioheart-player-play").trigger('click');
+        //     }, 2000)
+        // });
+    </script>
+
     <script type="text/javascript" src="js/side-menu.js"></script>
     <script type="text/javascript" src="js/player-ui-data-update.js"></script>
     <script type="text/javascript" src="js/popup.js"></script>
+    <script type="text/javascript" src="js/widgets-handling.js"></script>
+    <script type="text/javascript" src="js/search-modal.js"></script>
+    <script type="text/javascript" src="js/copy-link.js"></script>
+    <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/manifest.js"></script>
+    <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/vendor.js"></script>
+    <script type="text/javascript" src="https://widgets.radioheart.ru/static/js/app.js"></script>
+    <script src="https://yastatic.net/share2/share.js" defer></script>
+
 
     <!-- Yandex.Metrika counter -->
 
@@ -258,6 +481,7 @@
     </noscript>
 
     <!-- /Yandex.Metrika counter -->
+
 </body>
 
 </html>

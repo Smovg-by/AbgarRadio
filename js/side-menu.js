@@ -11,6 +11,10 @@ $(function () {
 
         $button.toggleClass('side-menu__toggle-button_open');
         $button.toggleClass('side-menu__toggle-button_closed');
+
+        $('#arrow-button').fadeToggle(0)
+        $('#burger-button').fadeToggle(0)
+        
         $footer.toggleClass('invisible');
 
         if ($button.hasClass('side-menu__toggle-button_open')) {
