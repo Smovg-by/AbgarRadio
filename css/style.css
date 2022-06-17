@@ -27,7 +27,6 @@ body {
   width: 70px !important;
   color: rgba(255, 255, 255, 0.5);
   background: rgba(0, 0, 0, 0.3);
-  /* background: red; */
   border-radius: 50%;
   margin: 0 50px;
 }
@@ -74,12 +73,6 @@ body {
 
 .footer-controls__order {
   background-image: url("/img/order-icon.svg");
-}
-.footer-controls__share {
-  /* background-image: url("/img/share-icon.svg"); */
-}
-.footer-controls__reload {
-  /* background-image: url("/img/reload-icon.svg"); */
 }
 
 /* controls menu styles END*/
@@ -189,7 +182,6 @@ body {
 .side-menu__toggle-button_open {
   width: 50px;
   height: 50px;
-  /* background: url("/img/icons.png?") -150px -350px !important; */
 }
 .side-menu__toggle-button_closed {
   width: 50px;
@@ -197,12 +189,6 @@ body {
   background: none;
 }
 
-/* .side-menu__toggle-button-white {
-  background: url("/img/icons.png?") -50px -350px;
-}
-.side-menu__toggle-button-black {
-  background: url(/img/icons.png?) 0px -350px;
-} */
 .side-menu__channels {
   display: block;
   text-align: center;
@@ -346,8 +332,6 @@ body {
 }
 
 .os-icon {
-  /* width: 50px;
-  height: 48px; */
   width: 42px;
   height: 42px;
   background-size: 42px 42px !important;
@@ -361,10 +345,14 @@ body {
 .radio-icon {
   height: 70px;
   width: 70px;
-  margin: 0 auto 16px auto;
+  margin: 22px auto 3px auto;
   border-radius: 15px;
   background: url("/img/logo-500x500.jpg");
   background-size: 70px 70px;
+}
+
+.instructions_popup .icon-title {
+  font-size: 14px;
 }
 
 .active {
@@ -484,9 +472,6 @@ body {
 }
 
 .search_container {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: flex-start; */
   padding: 15px;
   width: 40vw;
   position: absolute;
@@ -526,9 +511,6 @@ body {
   z-index: 230;
 }
 
-/* footer menu styles END*/
-
-/* widgets styling START */
 
 /* hide widgets div, cause wrapping in this div disable radio playing */
 
@@ -672,7 +654,6 @@ body {
 }
 
 .donate-sign {
-  /* white-space: nowrap; */
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 12px;
@@ -680,6 +661,9 @@ body {
   align-self: flex-start;
 }
 
+.donate-sign.primary {
+  margin-bottom: 21px;
+}
 .send-donate-button.primary {
   background-color: #6496dc;
 }

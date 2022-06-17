@@ -28,7 +28,7 @@ $(document).ready(function () {
   function updateMediaSession() {
     if ("mediaSession" in navigator) {
       if (metaImage == "") {
-        metaImage = "/imag/logo-500x500.jpg";
+        metaImage = "../img/logo-500x500";
       } else {
         metaImage = metaImage.slice(4, -1).replace(/"/g, "");
       }
